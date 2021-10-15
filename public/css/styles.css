@@ -1,0 +1,56 @@
+*{
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Navbar */
+.navbar{
+  padding: 1rem;
+  border-bottom: 1px solid #CCC;
+}
+
+
+/* Banner */
+
+#top-container{
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+  background-image: url("/img/background.jpg");
+  background-color: #f7f9fc;
+  border-bottom: 1px solid #DDE0F4;
+  margin-bottom: 30px;
+}
+
+#main-title{
+  color: white;
+  font-size: 3rem;
+}
+
+#main-subtitle{
+  color: white;
+  font-size: 1rem;
+}
+
+/*form*/
+.botaopesquisar{
+  margin-top: 15px;
+}
+
+#jobs-container{
+  width: 450px;
+}
+
+#job-list{
+  list-style: none;
+}
+
+#jobs-container img{
+  width: 350px;
+}
+
+.new-job{
+  border-radius: 20px;
+  padding: 30px;
+  border: 3px solid #DDE0F4;
+  margin-bottom: 30px;
+}

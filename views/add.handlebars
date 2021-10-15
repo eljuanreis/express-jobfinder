@@ -1,0 +1,45 @@
+
+  <div class="container">
+    <form action="/jobs/add" method="post">
+    <h2 id="job-list-title">Cadastre uma vaga</h2>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Título da vaga</label>
+        <input type="text" class="form-control" id="title" name="title" aria-describedby="emailHelp" placeholder="Digite o título da vaga" >
+      </div>
+
+      <div class="form-group">
+        <label for="description">Descrição da vaga</label>
+        <input type="text" class="form-control" id="title" name="description"  aria-describedby="emailHelp" placeholder="Digite a descrição da vaga" >
+      </div>
+
+  
+      <div class="form-group">
+        <label for="description">Companhia</label>
+        <input type="text" class="form-control" id="company" name="company" aria-describedby="emailHelp" placeholder="Digite a empresa que está oferecendo a vaga" >
+      </div>
+
+    
+      <div class="form-group">
+        <label for="salary">Salário em R$</label>
+        <input type="text" class="form-control" id="salary" name="salary" aria-describedby="emailHelp" placeholder="Digite o salário da vaga" >
+      </div>
+
+    
+      <div class="form-group">
+        <label for="email">E-mail</label>
+        <input type="text" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Digite o e-mail de contato da vaga" >
+        <small id="emailHelp" class="form-text text-muted">Este e-mail ficará público.</small>
+      </div>
+
+      <div class="form-group">
+       <label for="new_job">A vaga é:</label>
+        <select name="new_job">
+          <option value="0">Velha</option>
+          <option value="1">Nova</option>
+        </select>
+      </div>
+      <br>
+      <button type="submit" class="btn btn-primary">Cadastrar Vaga</button>
+
+    </form>
+  </div>

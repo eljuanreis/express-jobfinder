@@ -1,0 +1,58 @@
+<div id="top-container" class="container-fluid">
+    <h1 id="main-title" class="text-center">Encontre o emprego dos sonhos</h1>
+    <p id="main-subtitle" class="text-center">Várias vagas para contratação</p>
+    <form id="search-form" class="form-inline" action="/" method="get">
+      <div class="form-group col-md-10">
+        <input type="text" class="form-control" id="job" name="job" placeholder="Pesquise vagas">
+      <div class="col md-2 botaopesquisar">
+        <button type="submit" class="btn btn-primary">Encontrar vagas</button>
+      </div>
+      </div>
+    </form>
+  </div>
+
+  <main>
+    {{#if search}}
+      <div id="jobs-container" class="container">
+        <h2 id="job-list-title">Vejas as vagas de {{search}}</h2>
+        <div class="row">
+          <div class="col-md-12">
+            {{#each jobs}}
+            <ul id="job-list" class="list-group">
+              <li class="new-job">
+                <img src="https://www.folhavitoria.com.br/geral/blogs/direito-ao-direito/wp-content/uploads/2020/09/imagem-corporativa-fv.png" alt="Imagem da empresa">
+                <p>{{dataValues.company}}</p>
+                <h2>{{dataValues.title}}</h2>
+                <p>R$ {{dataValues.salary}}</p>
+                {{#if dataValues.new_job}}
+                    <span class="btn btn-success">Nova</span>
+                {{/if}}
+                <a class="btn btn-primary" href="/jobs/view/{{dataValues.id}}">Ver Vaga</a>
+              </li>
+            </ul>
+            {{/each}}
+    {{else}}
+      <div id="jobs-container" class="container">
+        <h2 id="job-list-title">Vejas as nossas vagas em listagem</h2>
+        <div class="row">
+          <div class="col-md-12">
+            {{#each jobs}}
+            <ul id="job-list" class="list-group">
+              <li class="new-job">
+                <img src="https://www.folhavitoria.com.br/geral/blogs/direito-ao-direito/wp-content/uploads/2020/09/imagem-corporativa-fv.png" alt="Imagem da empresa">
+                <p>{{dataValues.company}}</p>
+                <h2>{{dataValues.title}}</h2>
+                <p>R$ {{dataValues.salary}}</p>
+                {{#if dataValues.new_job}}
+                    <span class="btn btn-success">Nova</span>
+                {{/if}}
+                <a class="btn btn-primary" href="/jobs/view/{{dataValues.id}}">Ver Vaga</a>
+              </li>
+            </ul>
+            {{/each}}
+    {{/if}}
+
+        </div>
+      </div>
+    </div>
+  </main>

@@ -1,0 +1,30 @@
+{{#if job}}
+<div class="container">
+<div class="card text-center" style="margin-bottom: 35px; margin-top: 25px;">
+  <div class="card-header">
+    {{job.dataValues.title}}
+  </div>
+  <div class="card-body">
+    {{#if job.dataValues.new_job}}
+        <p class="btn btn-success">Nova</p >
+    {{/if}}
+    <h5 class="card-title">Empresa: {{job.dataValues.company}}</h5>
+    <p class="card-text">Salário: R${{job.dataValues.salary}}</p>
+    <p>Serviços: 
+      <b>
+        {{job.dataValues.description}}
+      </b>
+    </p>
+    <p>E-mail de contato: {{job.dataValues.email}}</p>
+  </div>
+  <div class="card-footer text-muted">
+    Data de publicação da vaga: {{date}}
+  </div>
+  <div class="card-footer text-muted">
+      <a class="btn btn-primary" href="/">Voltar</a>
+  </div>
+</div>
+</div>
+{{else}}
+<h1>Vaga não encontrada!</h1>
+{{/if}}
